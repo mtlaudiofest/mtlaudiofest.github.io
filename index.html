@@ -13,12 +13,12 @@
 
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <!-- <script src="js/scripts.js"></script> -->
-    <script src="js/index.js"></script>
+    <!-- <script src="js/index.js"></script> -->
 
     <title>Montr&eacuteal Audio Fest</title>
   </head>
 
-  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <body onload="scrolling()" data-spy="scroll" data-target=".navbar" data-offset="50">
 
     <!-- Header Image -->
     <div class="container-fluid bg-1 text-center black">
@@ -91,16 +91,21 @@
               return s1lower > s2lower? 1 : (s1lower < s2lower? -1:0);
             }
 
-              var brands= ["Acoustic Technologies", "Atelier Audio", "Atoll &Eacutelectronique", "Audio Note UK",
-             "Audio Occasion", "Audio Sensibility", "Audio W3", "AudioGroup", "AudioPathways", "Audiophonie",
-             "Audition V&eacuteritable", "Bit Perfect", "Brosseau Audio Video", "Bryston", "C&acircbles Luna",
-             "ClaeCast", "Codell Audio", "Coup de Foudre Audio Video", "DR Acoustics", "Finale Audio",
-             "Gershman Acoustics", "Goerner Communications", "Integrity Hi-Fi", "Jeff Joseph",
-             "Kevro International", "KimberCan", "Kronos Audio", "Layton Audio", "MA Recordings",
-             "Meridian", "Naim Audio", "Nexus International", "Oracle Audio", "Phonographe",
-             "Plurison", "PMC", "ProDesignAudio", "QNAP", "SF Marketing", "Shure", "Son Id&eacuteal",
-             "Son Ultime", "Tannoy", "TED", "Tri-Cell Enterprises", "V-Max Services", "Villeneuve Audio Video",
-             "Vintage Chris", "VPI Industries", "Wynn Audio", "XLO Electric", "Zidel Marketing"];
+          var brands= ["Acoustic Technologies", "Atelier Audio", "Atoll &Eacutelectronique", "Audio Note UK",
+          "Audio d'Occasion", "Audio Sensibility", "Audio W3", "AudioGroup", "AudioPathways", "Audiophonie",
+          "Audition V&eacuteritable", "Bit Perfect", "Brosseau Audio Video", "Bryston", "C&acircbles Luna",
+          "ClaeCast", "Codell Audio", "Coup de Foudre Audio Video", "DR Acoustics", "Finale Audio",
+          "Gershman Acoustics", "Goerner Communications", "Integrity Hi-Fi", "Joseph Audio",
+          "Kevro International", "KimberCan", "Kronos Audio", "Layton Audio", "MA Recordings",
+          "Meridian", "Naim Audio", "Nexus International", "Oracle Audio", "Phonographe",
+          "Plurison", "PMC", "ProDesignAudio", "QNAP", "SF Marketing", "Shure", "Son Id&eacuteal",
+          "Son Ultime", "Tannoy", "Tri-Cell Enterprises", "V-Max Services", "Villeneuve Audio Video",
+          "Vintage Chris", "VPI Industries", "Wynn Audio", "XLO Electric", "Zidel Marketing",
+          "Arteluthe", "Albedo Silver Cables", "Artist Cloner", "ASONA", "Audio Alchemy", "Charisma Audio",
+          "Gentec International", "Hegel", "Magazine Son et Image", "Magazine TED", "Moon by SimAudio",
+          "Pleko Vinyl", "Summit Hi-Fi", "Triode Lab"];
+
+
             brands.sort(insensitive);
 
             var strHTML = "<h1 class=\"title-center\">Exhibitors</h1><br /><table class=\"table\">"
@@ -158,6 +163,35 @@
   <script type="text/javascript">
   	$(document).ready(function() {
   		$(".fancybox").fancybox();
+
+      var navbar = $('#navbar-main'),
+          distance = navbar.offset().top,
+          $window = $(window);
+
+      $window.scroll(function() {
+          if ($window.scrollTop() >= distance) {
+              navbar.removeClass('navbar-custom-top').removeClass('navbar-fixed-top').addClass('navbar-custom-top').addClass('navbar-fixed-top');
+              $("body").css("padding-top", "70px");
+          } else {
+              navbar.removeClass('navbar-custom-top').removeClass('navbar-fixed-top');
+              $("body").css("padding-top", "0px");
+          }
+      });
+
+      $('#map').addClass('scrolloff');                // set the mouse events to none when doc is ready
+
+      $('#overlay').on("mouseup",function(){          // lock it when mouse up
+        $('#map').addClass('scrolloff');
+        //somehow the mouseup event doesn't get call...
+      });
+      $('#overlay').on("mousedown",function(){        // when mouse down, set the mouse events free
+        $('#map').removeClass('scrolloff');
+      });
+
+      $("#map").mouseleave(function () {              // becuase the mouse up doesn't work...
+        $('#map').addClass('scrolloff');            // set the pointer events to none when mouse leaves the map area
+                                                    // or you can do it on some other event
+      });
   	});
   </script>
   </body>

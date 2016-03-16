@@ -1,0 +1,180 @@
+* {
+font-family: 'lato',Helvetica,Arial,sans-serif;
+}
+
+.container-fluid {
+margin-bottom: 0px;
+padding: 0px;
+}
+
+.container-content{
+padding: 0px;
+margin: 0px;
+height: 500px;
+}
+
+a:hover{
+color: #4d94ff !important;
+text-decoration: none;
+}
+
+a{
+font-size: 1.5em;
+/*padding: 10px 50px 10px 50px;*/ /*this ruined fancy box and didnt seem to do anything*/
+color: grey;
+text-decoration: none !important;
+}
+
+.headerimg{
+width: 100%;
+height: auto;
+}
+
+.navbar .navbar-nav {
+display: inline-block;
+float: none;
+vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+text-align: center;
+}
+
+.rightpadding{
+padding: 0px 0px;
+}
+
+.logoimg{
+width: 50%;
+height: auto;
+}
+
+#overview {
+padding-top: 50px;
+background-color: #FFF;
+font-size: 1.4em;
+
+}
+
+#brands{
+padding-top: 50px;
+background-color: rgba(75,125,255,0.1);
+
+}
+
+#floorplan{
+padding-top: 50px;
+background-color: white;
+}
+
+#events{
+padding-top: 50px;
+/*background-color: rgba(75,125,255,0.1);*/
+max-height: 1500px;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover{
+background-color: #F8F8F8;
+color: #4d94ff !important;
+}
+
+
+.navbar-nav > li{
+  margin-left:35px;
+  margin-right:35px;
+}
+
+.img-circle {
+display:block;
+margin: 1em auto 1em auto;
+}
+
+#floatleft{
+  float: left;
+}
+
+#clearfloat{
+  clear: both;
+  background-color: red;
+}
+
+/*.container{
+  width: 100%;
+}*/
+
+td{
+  text-align: center;
+  font-size: 1.5em;
+  width: 25%;
+}
+
+caption{
+  text-align: center;
+  font-size: 2em;
+}
+
+table{
+  width: 100%;
+}
+
+.table th, .table td {
+  border-top: none !important;
+}
+
+.title-center{
+  text-align: center;
+  color: #777;
+}
+
+.pdflink{
+  padding: 0;
+}
+
+.language{
+  position: absolute;;
+  color: white;
+  width: auto !important;
+  margin-top: 0.5em;
+}
+
+.changelang{
+  position:absolute;
+  margin-top: .8em;
+}
+
+.langcol{
+  color: #F8F8F8;
+  padding: 0;
+  font-size: 1.25em;
+}
+
+.email{
+  font-size: 1em;
+  padding: 0;
+}
+
+.facebooklink{
+  font-size: 1em;
+  padding: 0;
+}
+
+.scrolloff {
+  pointer-events: none;
+}
+
+#eventstable td{
+  text-align:left;
+  font-size: 1em;
+}
+
+#eventstable th{
+  font-size: 1.5em;
+}
+
+.thumbnail2{
+  height: 75% !important;
+  width: 75% !important;
+}
+
+h1{
+  color:#303F9F !important;
+}

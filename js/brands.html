@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>question</title>
+  </head>
+  <body id="loadTable">
+
+    <script type=text/javascript>
+      var strHTML = "<table class=\"table\"><caption>Exhibitors</caption>"
+
+      for (var i = 0; i< brands.length; i = i+4){
+        strHTML += "<tr><td>"+brands[i]+"</td><td>"+brands[i+1]+"</td><td>"+brands[i+2]+"</td><td>"+brands[i+3]+"</td></tr>";
+      }
+
+      strHTML += "</table>";
+
+      document.getElementById("brands").innerHTML = strHTML;
+  </script>
+
+  </body>
+</html>
+
+
+<table class="table">
+  <caption>Exhibitors</caption>
+
+  <tr><td>samsung</td><td>googleapis</td><td>apple</td><td>microsoft</td></tr>
+  <tr><td>samsung</td><td>googleapis</td><td>apple</td></tr>
+  <tr><td>samsung</td><td>googleapis</td><td>apple</td></tr>
+  <tr><td>samsung</td><td>googleapis</td><td>apple</td></tr>
+
+</table>

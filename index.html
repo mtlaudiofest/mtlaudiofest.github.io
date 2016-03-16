@@ -1,10 +1,164 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Chris Woo, Johnny Interiano">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="js/scripts.js"></script>
+
+    <title>Montr&eacuteal Audio Fest</title>
   </head>
-  <body>
-    <p>hello world</p>
+
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <!-- Header Image -->
+    <div class="container-fluid bg-1 text-center black">
+      <div class="container changelang">
+        <div class="row">
+          <div class="col-sm-1"><a class="langcol" href="">EN</a> </div>
+          <div class="col-sm-1"><a class="langcol" href="fr.html">FR</a></div>
+        </div>
+      </div>
+
+      <img class="headerimg" src="img/logoheader.png">
+    </div>
+
+   <!-- Navbar -->
+    <nav id="navbar-main" class="navbar navbar-default container2" style="border-bottom:2px solid rgba(0,0,0,0.25)">
+      <div class="container">
+        <div class="navbar-header" >
+
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+
+          </button>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse" >
+          <ul class="nav navbar-nav" >
+            <li class="rightpadding"><a href="#overview">Overview</a></li>
+            <li class="rightpadding"><a href="#brands">Brands & Exhibitors</a></li>
+            <li class="rightpadding"><a href="#floorplan">Floorplan</a></li>
+            <li class="rightpadding"><a href="#events">Events</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <main class="container" >
+      <!-- overview -->
+      <div id="overview">
+	      <div class="row">
+          <div class="col-sm-5"><img src="img/hotel.jpg" class="img-circle" alt="Cinque Terre"  width="300" height="300"></div>
+	          <div class="col-sm-7">
+              <h1>When & Where</h1>
+                <p>
+                   The 29th edition of the Montréal Audio Fest is taking place at the beautiful Hilton Bonaventure Hotel,
+                   located in the Montréal, Québec and takes place<br/ ><br/ >
+
+                   Friday from 11:00AM to 8:00PM<br/ >
+                   Saturday from 10:00AM to 6:00PM<br/ >
+                   Sunday from 10:00AM to 5:00PM<br/ ><br/ >
+                     Free admission to all visitors.<br />Check out our <a style="color:#303F9F"class="facebooklink" href="https://www.facebook.com/events/970984669661498/" target="_blank"> facebook event </a> for more info!<br/ >
+                </p>
+	          </div>
+	      </div>
+        <div class="clearfloat"> </div>
+        <div id="overlay" class="map">
+            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2796.533541109011!2d-73.5671352845696!3d45.49933723911928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a5cea5f36fb%3A0x5c249de257b318c0!2sHotel+Bonaventure+Montr%C3%A9al!5e0!3m2!1sen!2sca!4v1457931967808" width="100%" height="500" frameborder="0" ></iframe>
+        </div>
+     </div>
+
+      <!-- brands -->
+    <div id="brands" class="table-responsive">
+
+        <script type=text/javascript>
+            function insensitive(s1,s2){
+              var s1lower = s1.toLowerCase();
+              var s2lower = s2.toLowerCase();
+
+              return s1lower > s2lower? 1 : (s1lower < s2lower? -1:0);
+            }
+
+              var brands= ["Acoustic Technologies", "Atelier Audio", "Atoll &Eacutelectronique", "Audio Note UK",
+             "Audio Occasion", "Audio Sensibility", "Audio W3", "AudioGroup", "AudioPathways", "Audiophonie",
+             "Audition V&eacuteritable", "Bit Perfect", "Brosseau Audio Video", "Bryston", "C&acircbles Luna",
+             "ClaeCast", "Codell Audio", "Coup de Foudre Audio Video", "DR Acoustics", "Finale Audio",
+             "Gershman Acoustics", "Goerner Communications", "Integrity Hi-Fi", "Jeff Joseph",
+             "Kevro International", "KimberCan", "Kronos Audio", "Layton Audio", "MA Recordings",
+             "Meridian", "Naim Audio", "Nexus International", "Oracle Audio", "Phonographe",
+             "Plurison", "PMC", "ProDesignAudio", "QNAP", "SF Marketing", "Shure", "Son Id&eacuteal",
+             "Son Ultime", "Tannoy", "TED", "Tri-Cell Enterprises", "V-Max Services", "Villeneuve Audio Video",
+             "Vintage Chris", "VPI Industries", "Wynn Audio", "XLO Electric", "Zidel Marketing"];
+            brands.sort(insensitive);
+
+            var strHTML = "<h1 class=\"title-center\">Exhibitors</h1><br /><table class=\"table\">"
+
+            for (var i = 0; i< brands.length; i = i+4){
+            strHTML += "<tr>";
+            if (brands[i] != undefined) {
+              strHTML += "<td>"+brands[i]+"</td>"
+            }
+            if (brands[i+1] != undefined) {
+              strHTML += "<td>"+brands[i+1]+"</td>"
+            }
+            if (brands[i+2] != undefined) {
+              strHTML += "<td>"+brands[i+2]+"</td>"
+            }
+            if (brands[i+3] != undefined) {
+              strHTML += "<td>"+brands[i+3]+"</td>"
+            }
+            strHTML+= "</tr>";
+            }
+            strHTML += "</table>";
+          document.getElementById("brands").innerHTML = strHTML;
+        </script>
+        <p style="background-color: #F8F8F8; border-top:1px solid grey; border-bottom:1px solid grey; font-size:1.5em;text-align:center;">Would your company like to exhibit? E-mail Sarah at  <a class="email"href="mailto:sarah@audiogroup.ca?Subject=Exhibitor%20Request" target="_top">sarah@audiogroup.ca</a></p>
+   </div>
+
+    <!-- floorplan -->
+    <div id="floorplan">
+      <h1 class="title-center">Floorplan</h1>
+        <a class="pdflink" href="./img/floorplan.pdf" target="_blank"><img src="img/pdficon.png" alt="PDF Icon"/>  floorplan.pdf</a><br/ ><br/ ><br/ >
+    	  <a class="pdflink" href="./img/floorplan.pdf" target="_blank"><img style="width:100%" src="./img/floorplansmall.png" alt="Floorplan"/></a> <br/ ><br/ >
+    </div>
+
+    <!-- events -->
+    <div id="events" class="table-responsive">
+        <h1 class="title-center">Events</h1><br />
+			<table class="table" id="eventstable">
+			  <tr><th>Thumbnail</th><th>Name</th><th>Location</th><th>Time</th></tr>
+			  <tr><td><a href="img/performance_par_isabeau_corriveau.jpg" class="thumbnail"><img class="thumbnail2" src="img/performance_par_isabeau_corriveau.jpg" alt='Isabeau Corriveau' /></a></td><td>Performance par Isabeau Corriveau</td><td>Lounge Grado, suite 2414</td><td>Saturday</td></tr>
+			  <tr><td><a href="img/performance_par_liu_fang.jpg" class="thumbnail"><img class="thumbnail2" src="img/performance_par_liu_fang.jpg" alt='Liu Fang' /></a></td><td>Performance par Liu Fang</td><td>Lounge Grado, suite 2414</td><td>Saturday 4:30PM</td></tr>
+			  <tr><td><a href="img/pre-lancement_de_lalbum.jpg" class="thumbnail"><img class="thumbnail2" src="img/pre-lancement_de_lalbum.jpg" alt='Album Pre-Launch' /></a></td><td>Album Pre-Launch</td><td>Lounge Grado, suite 2414</td><td><table><tr><th style="font-size:1em; padding-right:2em">Meet Up</th><th style="font-size:1em">Performance</th></tr><tr><td>Friday 4:30pm, Saturday 11:30am, Sunday 11:30am</td><td>Friday 7:30pm, Saturday 2:30pm, Sunday 2:30pm</td></tr></table></td></tr>
+			</table>
+    </div>
+
+  </main>
+
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="js/index.js"></script>
+  <script src="js/index.js"></script>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <!--fancybox-->
+  <script type="text/javascript" src="source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  <script type="text/javascript">
+  	$(document).ready(function() {
+  		$(".fancybox").fancybox();
+  	});
+  </script>
   </body>
 </html>

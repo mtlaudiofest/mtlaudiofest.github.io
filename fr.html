@@ -1,20 +1,27 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Chris Woo, Johnny Interiano">
+    <meta property="og:url"                content="https://mtlaudiofest.github.io/" />
+    <meta property="og:type"               content="website" />
+    <meta property="og:title"              content="Montreal Audio Fest" />
+    <meta property="og:description"        content="It’s happening! The 29th edition of the annual Montreal Audio Fest is taking place from March 18th through 20th at Hotel Bonaventure Montreal." />
+    <meta property="og:image"              content="https://mtlaudiofest.github.io/img/logoheader.png" />
 
+    <link rel="shortcut icon" href="img/favicon.ico" />
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <link rel="stylesheet" href="source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
 
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <script src="js/scripts.js"></script>
+    <!-- <script src="js/scripts.js"></script> -->
+    <!-- <script src="js/index.js"></script> -->
 
-    <title>Montr&eacuteal Audio Fest</title>
+    <title>Montreal Audio Fest</title>
   </head>
 
   <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -23,8 +30,8 @@
     <div class="container-fluid bg-1 text-center black">
       <div class="container changelang">
         <div class="row">
-          <div class="col-sm-1"><a class="langcol" href="index.html">EN</a> </div>
-          <div class="col-sm-1"><a class="langcol" href="">FR</a></div>
+          <div class="col-sm-1"><a class="langcol" href="">EN</a> </div>
+          <div class="col-sm-1"><a class="langcol" href="fr.html">FR</a></div>
         </div>
       </div>
 
@@ -61,7 +68,7 @@
 	      <div class="row">
           <div class="col-sm-5"><img src="img/hotel.jpg" class="img-circle" alt="Cinque Terre"  width="300" height="300"></div>
 	          <div class="col-sm-7">
-              <h1>Translate this page to French</h1>
+              <h1>Translate to french</h1>
                 <p>
                    The 29th edition of the Montréal Audio Fest is taking place at the beautiful Hilton Bonaventure Hotel,
                    located in the Montréal, Québec and takes place<br/ ><br/ >
@@ -90,16 +97,21 @@
               return s1lower > s2lower? 1 : (s1lower < s2lower? -1:0);
             }
 
-              var brands= ["Acoustic Technologies", "Atelier Audio", "Atoll &Eacutelectronique", "Audio Note UK",
-             "Audio Occasion", "Audio Sensibility", "Audio W3", "AudioGroup", "AudioPathways", "Audiophonie",
-             "Audition V&eacuteritable", "Bit Perfect", "Brosseau Audio Video", "Bryston", "C&acircbles Luna",
-             "ClaeCast", "Codell Audio", "Coup de Foudre Audio Video", "DR Acoustics", "Finale Audio",
-             "Gershman Acoustics", "Goerner Communications", "Integrity Hi-Fi", "Jeff Joseph",
-             "Kevro International", "KimberCan", "Kronos Audio", "Layton Audio", "MA Recordings",
-             "Meridian", "Naim Audio", "Nexus International", "Oracle Audio", "Phonographe",
-             "Plurison", "PMC", "ProDesignAudio", "QNAP", "SF Marketing", "Shure", "Son Id&eacuteal",
-             "Son Ultime", "Tannoy", "TED", "Tri-Cell Enterprises", "V-Max Services", "Villeneuve Audio Video",
-             "Vintage Chris", "VPI Industries", "Wynn Audio", "XLO Electric", "Zidel Marketing"];
+          var brands= ["Acoustic Technologies", "Atelier Audio", "Atoll &Eacutelectronique", "Audio Note UK",
+          "Audio d'Occasion", "Audio Sensibility", "Audio W3", "AudioGroup", "AudioPathways", "Audiophonie",
+          "Audition V&eacuteritable", "Bit Perfect", "Brosseau Audio Video", "Bryston", "C&acircbles Luna",
+          "ClaeCast", "Codell Audio", "Coup de Foudre Audio Video", "DR Acoustics", "Finale Audio",
+          "Gershman Acoustics", "Goerner Communications", "Integrity Hi-Fi", "Joseph Audio",
+          "Kevro International", "KimberCan", "Kronos Audio", "Layton Audio", "MA Recordings",
+          "Meridian", "Naim Audio", "Nexus International", "Oracle Audio", "Phonographe",
+          "Plurison", "PMC", "ProDesignAudio", "QNAP", "SF Marketing", "Shure", "Son Id&eacuteal",
+          "Son Ultime", "Tannoy", "Tri-Cell Enterprises", "V-Max Services", "Villeneuve Audio Video",
+          "Vintage Chris", "VPI Industries", "Wynn Audio", "XLO Electric", "Zidel Marketing",
+          "Arteluthe", "Albedo Silver Cables", "Artist Cloner", "ASONA", "Audio Alchemy", "Charisma Audio",
+          "Gentec International", "Hegel", "Magazine Son et Image", "Magazine TED", "Moon by SimAudio",
+          "Pleko Vinyl", "Summit Hi-Fi", "Triode Lab"];
+
+
             brands.sort(insensitive);
 
             var strHTML = "<h1 class=\"title-center\">Exhibitors</h1><br /><table class=\"table\">"
@@ -138,27 +150,21 @@
         <h1 class="title-center">Events</h1><br />
 			<table class="table" id="eventstable">
 			  <tr><th>Thumbnail</th><th>Name</th><th>Location</th><th>Time</th></tr>
-			  <tr><td><a href="img/performance_par_isabeau_corriveau.jpg" class="thumbnail"><img class="thumbnail2" src="img/performance_par_isabeau_corriveau.jpg" alt='Isabeau Corriveau' /></a></td><td>Performance par Isabeau Corriveau</td><td>Lounge Grado, suite 2414</td><td>Saturday</td></tr>
-			  <tr><td><a href="img/performance_par_liu_fang.jpg" class="thumbnail"><img class="thumbnail2" src="img/performance_par_liu_fang.jpg" alt='Liu Fang' /></a></td><td>Performance par Liu Fang</td><td>Lounge Grado, suite 2414</td><td>Saturday 4:30PM</td></tr>
-			  <tr><td><a href="img/pre-lancement_de_lalbum.jpg" class="thumbnail"><img class="thumbnail2" src="img/pre-lancement_de_lalbum.jpg" alt='Album Pre-Launch' /></a></td><td>Album Pre-Launch</td><td>Lounge Grado, suite 2414</td><td><table><tr><th style="font-size:1em; padding-right:2em">Meet Up</th><th style="font-size:1em">Performance</th></tr><tr><td>Friday 4:30pm, Saturday 11:30am, Sunday 11:30am</td><td>Friday 7:30pm, Saturday 2:30pm, Sunday 2:30pm</td></tr></table></td></tr>
+			  <tr><td><a href="img/performance_par_isabeau_corriveau.jpg" class="thumbnail  fancybox"><img class="thumbnail2" src="img/performance_par_isabeau_corriveau.jpg" alt='Isabeau Corriveau' target="_blank" /></a></td><td>Performance par Isabeau Corriveau</td><td>Lounge Grado, suite 2414</td><td>Saturday</td></tr>
+			  <tr><td><a href="img/performance_par_liu_fang.jpg" class="thumbnail fancybox "><img class="thumbnail2" src="img/performance_par_liu_fang.jpg" alt='Liu Fang'  target="_blank"/></a></td><td>Performance par Liu Fang</td><td>Lounge Grado, suite 2414</td><td>Saturday 4:30PM</td></tr>
+			  <tr><td><a href="img/pre-lancement_de_lalbum.jpg" class="thumbnail fancybox"><img class="thumbnail2" src="img/pre-lancement_de_lalbum.jpg" alt='Album Pre-Launch'  target="_blank"/></a></td><td>Album Pre-Launch</td><td>Lounge Grado, suite 2414</td><td><table><tr><th style="font-size:1em; padding-right:2em">Meet Up</th><th style="font-size:1em">Performance</th></tr><tr><td>Friday 4:30pm, Saturday 11:30am, Sunday 11:30am</td><td>Friday 7:30pm, Saturday 2:30pm, Sunday 2:30pm</td></tr></table></td></tr>
 			</table>
     </div>
 
   </main>
 
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-  <script src="js/index.js"></script>
-  <script src="js/index.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="js/bootstrap.min.js"></script>
   <!--fancybox-->
   <script type="text/javascript" src="source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  <script type="text/javascript">
-  	$(document).ready(function() {
-  		$(".fancybox").fancybox();
-  	});
-  </script>
+  <script src="js/index.js"></script>
   </body>
 </html>

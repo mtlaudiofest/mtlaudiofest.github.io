@@ -21,13 +21,34 @@ text-decoration: none;
 a{
 font-size: 1.5em;
 /*padding: 10px 50px 10px 50px;*/ /*this ruined fancy box and didnt seem to do anything*/
-color: grey;
+/*color:grey;*/
 text-decoration: none !important;
 }
 
+a.navigation{
+font-size: 1.5em;
+/*padding: 10px 50px 10px 50px;*/ /*this ruined fancy box and didnt seem to do anything*/
+text-decoration: none !important;
+}
+
+a.navigation:not(:hover){
+  color: #fff !important;
+}
+
+.headerlogo{
+  width:33%;
+  height: auto;
+  margin: 10px 0px;
+}
 .headerimg{
-width: 100%;
-height: auto;
+width: auto;
+height: inherit;
+}
+.bg-img{
+    background-image:url("../img/headerbg.jpg");
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-position: right;
 }
 
 .navbar .navbar-nav {
@@ -51,20 +72,20 @@ height: auto;
 
 #overview {
 padding-top: 50px;
-background-color: #FFF;
+background-color: #f9f9f9;
 font-size: 1.4em;
 
 }
 
 #brands{
 padding-top: 50px;
-background-color: rgba(75,125,255,0.1);
+background-color: rgba(75,125,205,0.1);
 
 }
 
 #floorplan{
 padding-top: 50px;
-background-color: white;
+background-color: #f9f9f9;
 }
 
 #events{
@@ -77,10 +98,19 @@ background-color: #F8F8F8;
 color: #4d94ff !important;
 }
 
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover{
+background-color: transparent;
+color: #4d94ff !important;
+}
+
 
 .navbar-nav > li{
   margin-left:35px;
   margin-right:35px;
+}
+
+.navbar-inverse{
+  border-radius: 0 !important;
 }
 
 .img-circle {
@@ -94,7 +124,6 @@ margin: 1em auto 1em auto;
 
 #clearfloat{
   clear: both;
-  background-color: red;
 }
 
 /*.container{
@@ -177,4 +206,8 @@ table{
 
 h1{
   color:#303F9F !important;
+}
+
+body{
+  background-color: #f9f9f9;
 }

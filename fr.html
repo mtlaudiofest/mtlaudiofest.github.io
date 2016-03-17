@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,12 +25,13 @@
     <!-- <script src="js/scripts.js"></script> -->
     <!-- <script src="js/index.js"></script> -->
 
-    <title>Montreal Salon Son</title>
+    <title>Montreal Salon Audio</title>
   </head>
 
   <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
     <!-- Header Image -->
+    <div class="bg-img">
     <div class="container-fluid bg-1 text-center black">
       <div class="container changelang">
         <div class="row">
@@ -38,12 +39,12 @@
           <div class="col-sm-1"><a class="langcol" href="">FR</a></div>
         </div>
       </div>
-
-      <img class="headerimg" src="img/logoheader.png">
+      <!--<img class="headerlogo" src="img/headerlogo.png">-->
+      <img class="headerlogo" src="img/headerlogo.png">
     </div>
-
+      </div>
    <!-- Navbar -->
-    <nav id="navbar-main" class="navbar navbar-default container2" style="border-bottom:2px solid rgba(0,0,0,0.25)">
+    <nav id="navbar-main" class="navbar navbar-inverse container2" style="border-bottom:2px solid rgba(0,0,0,0.25)">
       <div class="container">
         <div class="navbar-header" >
 
@@ -57,10 +58,10 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse" >
           <ul class="nav navbar-nav" >
-            <li class="rightpadding"><a href="#overview">Aper&ccedilu</a></li>
-            <li class="rightpadding"><a href="#brands">Exposants</a></li>
-            <li class="rightpadding"><a href="#floorplan">Plan d'&eacutetages</a></li>
-            <li class="rightpadding"><a href="#events">&Eacutev&eacutenements</a></li>
+            <li class="rightpadding"><a class="navigation" href="#overview">Aper&ccedilu</a></li>
+            <li class="rightpadding"><a class="navigation" href="#brands">Exposants</a></li>
+            <li class="rightpadding"><a class="navigation" href="#floorplan">Plan d'&eacutetages</a></li>
+            <li class="rightpadding"><a class="navigation" href="#events">&Eacutev&eacutenements</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -72,15 +73,14 @@
 	      <div class="row">
           <div class="col-sm-5"><img src="img/hotel.jpg" class="img-circle" alt="Cinque Terre"  width="300" height="300"></div>
 	          <div class="col-sm-7">
-              <h1>Quand & O&ugrave?</h1>
+              <h1>Lieu et dates</h1>
                 <p>
-                   The 29th edition of the Montréal Audio Fest is taking place at the beautiful Hilton Bonaventure Hotel,
-                   located in the Montréal, Québec and takes place<br/ ><br/ >
+                  Le Montr&eacuteal Salon Audio est de retour pour sa 29e &eacutedition au H&ocirctel Bonaventure Montr&eacuteal, au coeur du centre-ville de Montr&eacuteal. Les dates sont<br/ ><br/ >
 
                    Vendredi 11:00AM - 8:00PM<br/ >
                    Samedi 10:00AM - 6:00PM<br/ >
                    Dimanche 10:00AM - 5:00PM<br/ ><br/ >
-                   Free admission to all visitors.<br />Check out our <a style="color:#303F9F"class="facebooklink" href="https://www.facebook.com/events/970984669661498/" target="_blank"> facebook event </a> for more info!<br/ >
+                   L'entr&eacutee est gratuite pour les visiteurs.<br />Voir <a style="color:#303F9F"class="facebooklink" href="https://www.facebook.com/events/970984669661498/" target="_blank"> l'&eacutev&eacutenement facebook </a> pour plus d'informations<br/ >
                 </p>
 	          </div>
 	      </div>
@@ -138,7 +138,7 @@
             strHTML += "</table>";
           document.getElementById("brands").innerHTML = strHTML;
         </script>
-        <p style="background-color: #F8F8F8; border-top:1px solid grey; border-bottom:1px solid grey; font-size:1.5em;text-align:center;">Would your company like to exhibit? E-mail Sarah at  <a class="email"href="mailto:sarah@audiogroup.ca?Subject=Exhibitor%20Request" target="_top">sarah@audiogroup.ca</a></p>
+        <p style="background-color: #F8F8F8; border-bottom:1px solid grey; font-size:1.5em;text-align:center;">Est-ce que votre compagnie serait int&eacuteress&eacute &agrave participer? Envoyer un courriel &agrave Sarah  <a class="email"href="mailto:sarah@audiogroup.ca?Subject=Exhibitor%20Request" target="_top">sarah@audiogroup.ca</a></p>
    </div>
 
     <!-- floorplan -->
@@ -155,7 +155,7 @@
 			  <tr><th>Photo</th><th>Titre</th><th>Lieu</th><th>Heure</th></tr>
 			  <tr><td><a href="img/performance_par_isabeau_corriveau.jpg" class="thumbnail  fancybox"><img class="thumbnail2" src="img/performance_par_isabeau_corriveau.jpg" alt='Isabeau Corriveau' target="_blank" /></a></td><td>Performance par Isabeau Corriveau</td><td>Lounge Grado, suite 2414</td><td>Samedi</td></tr>
 			  <tr><td><a href="img/performance_par_liu_fang.jpg" class="thumbnail fancybox "><img class="thumbnail2" src="img/performance_par_liu_fang.jpg" alt='Liu Fang'  target="_blank"/></a></td><td>Performance par Liu Fang</td><td>Lounge Grado, suite 2414</td><td>Samedi 4:30PM</td></tr>
-			  <tr><td><a href="img/pre-lancement_de_lalbum.jpg" class="thumbnail fancybox"><img class="thumbnail2" src="img/pre-lancement_de_lalbum.jpg" alt='Album Pre-Launch'  target="_blank"/></a></td><td>Album Pre-Launch</td><td>Lounge Grado, suite 2414</td><td><table><tr><th style="font-size:1em; padding-right:2em">Meet Up</th><th style="font-size:1em">Performance</th></tr><tr><td>Vendredi 4:30pm, Samedi 11:30am, Dimanche 11:30am</td><td>Vendredi 7:30pm, Samedi 2:30pm, Dimanche 2:30pm</td></tr></table></td></tr>
+			  <tr><td><a href="img/pre-lancement_de_lalbum.jpg" class="thumbnail fancybox"><img class="thumbnail2" src="img/pre-lancement_de_lalbum.jpg" alt='Album Pre-Launch'  target="_blank"/></a></td><td>Pr&eacute-lancement de l'album</td><td>Lounge Grado, suite 2414</td><td><table><tr><th style="font-size:1em; padding-right:2em">Rencontre</th><th style="font-size:1em">Performance</th></tr><tr><td>Vendredi 4:30pm, Samedi 11:30am, Dimanche 11:30am</td><td>Vendredi 7:30pm, Samedi 2:30pm, Dimanche 2:30pm</td></tr></table></td></tr>
 			</table>
     </div>
 

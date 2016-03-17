@@ -28,7 +28,7 @@
     <title>Montreal Audio Fest</title>
   </head>
 
-  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <body id="top" data-spy="scroll" data-target=".navbar" data-offset="50">
 
     <!-- Header Image -->
     <div class="bg-img">
@@ -44,7 +44,7 @@
     </div>
       </div>
    <!-- Navbar -->
-    <nav id="navbar-main" class="navbar navbar-inverse container2" style="border-bottom:2px solid rgba(0,0,0,0.25)">
+    <nav id="navbar-main" class="navbar navbar-inverse" style="border-bottom:2px solid rgba(0,0,0,0.25)">
       <div class="container">
         <div class="navbar-header" >
 
@@ -57,11 +57,15 @@
           </button>
         </div>
         <div id="navbar" class="collapse navbar-collapse" >
+          <div class="navbar-header">
+            <a class="navigation navbar-brand" href="#top"><img src="img/homeicon.png"/></a>
+          </div>
           <ul class="nav navbar-nav" >
             <li class="rightpadding"><a class="navigation" href="#overview">Overview</a></li>
             <li class="rightpadding"><a class="navigation" href="#brands">Brands & Exhibitors</a></li>
             <li class="rightpadding"><a class="navigation" href="#floorplan">Floorplan</a></li>
             <li class="rightpadding"><a class="navigation" href="#events">Events</a></li>
+
           </ul>
         </div><!--/.nav-collapse -->
       </div>

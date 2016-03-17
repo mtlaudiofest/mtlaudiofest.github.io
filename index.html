@@ -31,6 +31,7 @@
   <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
     <!-- Header Image -->
+    <div class="bg-img">
     <div class="container-fluid bg-1 text-center black">
       <div class="container changelang">
         <div class="row">
@@ -38,12 +39,12 @@
           <div class="col-sm-1"><a class="langcol" href="fr.html">FR</a></div>
         </div>
       </div>
-
-      <img class="headerimg" src="img/logoheader.png">
+      <!--<img class="headerlogo" src="img/headerlogo.png">-->
+      <img class="headerlogo" src="img/headerlogo.png">
     </div>
-
+      </div>
    <!-- Navbar -->
-    <nav id="navbar-main" class="navbar navbar-default container2" style="border-bottom:2px solid rgba(0,0,0,0.25)">
+    <nav id="navbar-main" class="navbar navbar-inverse container2" style="border-bottom:2px solid rgba(0,0,0,0.25)">
       <div class="container">
         <div class="navbar-header" >
 
@@ -57,10 +58,10 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse" >
           <ul class="nav navbar-nav" >
-            <li class="rightpadding"><a href="#overview">Overview</a></li>
-            <li class="rightpadding"><a href="#brands">Brands & Exhibitors</a></li>
-            <li class="rightpadding"><a href="#floorplan">Floorplan</a></li>
-            <li class="rightpadding"><a href="#events">Events</a></li>
+            <li class="rightpadding"><a class="navigation" href="#overview">Overview</a></li>
+            <li class="rightpadding"><a class="navigation" href="#brands">Brands & Exhibitors</a></li>
+            <li class="rightpadding"><a class="navigation" href="#floorplan">Floorplan</a></li>
+            <li class="rightpadding"><a class="navigation" href="#events">Events</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -72,18 +73,17 @@
 	      <div class="row">
           <div class="col-sm-5"><img src="img/hotel.jpg" class="img-circle" alt="Cinque Terre"  width="300" height="300"></div>
 	          <div class="col-sm-7">
-
               <h1>When & Where</h1>
                 <p>
-                   The 29th edition of the Montréal Audio Fest is taking place at the beautiful Hilton Bonaventure Hotel,
-                   located in the Montréal, Québec and takes place<br/ ><br/ >
+                  The 29th edition of the Montréal Audio Fest is taking place at the beautiful Hilton Bonaventure Hotel,
+                  located in the Montréal, Québec. <br /><br/ >
 
-                   Friday 11:00AM - 8:00PM<br/ >
-                   Saturday 10:00AM - 6:00PM<br/ >
-                   Sunday 10:00AM - 5:00PM<br/ ><br/ >
-                   Free admission to all visitors.<br />Check out our <a style="color:#303F9F"class="facebooklink" href="https://www.facebook.com/events/970984669661498/" target="_blank"> facebook event </a> for more info!<br/ >
+                  Friday 11:00AM - 8:00PM<br/ >
+                  Saturday 10:00AM - 6:00PM<br/ >
+                  Sunday 10:00AM - 5:00PM<br/ ><br/ >
+                  Free admission to all visitors.<br />Check out our <a style="color:#303F9F"class="facebooklink" href="https://www.facebook.com/events/970984669661498/" target="_blank"> facebook event </a> for more info!<br/ >
+               </p>
                 </p>
-
 	          </div>
 	      </div>
         <div class="clearfloat"> </div>
@@ -117,7 +117,6 @@
           "Gentec International", "Hegel", "Magazine Son et Image", "Magazine TED", "Moon by SimAudio",
           "Pleko Vinyl", "Summit Hi-Fi", "Triode Lab"];
 
-
             brands.sort(insensitive);
 
             var strHTML = "<h1 class=\"title-center\">Exhibitors</h1><br /><table class=\"table\">"
@@ -141,7 +140,7 @@
             strHTML += "</table>";
           document.getElementById("brands").innerHTML = strHTML;
         </script>
-        <p style="background-color: #F8F8F8; border-top:1px solid grey; border-bottom:1px solid grey; font-size:1.5em;text-align:center;">Would your company like to exhibit? E-mail Sarah at  <a class="email"href="mailto:sarah@audiogroup.ca?Subject=Exhibitor%20Request" target="_top">sarah@audiogroup.ca</a></p>
+        <p style="background-color: #F8F8F8; border-bottom:1px solid grey; font-size:1.5em;text-align:center;">Would your company like to exhibit? E-mail Sarah at  <a class="email"href="mailto:sarah@audiogroup.ca?Subject=Exhibitor%20Request" target="_top">sarah@audiogroup.ca</a></p>
    </div>
 
     <!-- floorplan -->

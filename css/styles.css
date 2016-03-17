@@ -20,15 +20,17 @@ text-decoration: none;
 
 a{
 font-size: 1.5em;
-/*padding: 10px 50px 10px 50px;*/ /*this ruined fancy box and didnt seem to do anything*/
+/*padding: 10px 50px 10px 50px; /*this ruined fancy box and didnt seem to do anything*/
 /*color:grey;*/
 text-decoration: none !important;
+
 }
 
 a.navigation{
 font-size: 1.5em;
 /*padding: 10px 50px 10px 50px;*/ /*this ruined fancy box and didnt seem to do anything*/
 text-decoration: none !important;
+padding: 15px 9px 15px 9px !important;
 }
 
 a.navigation:not(:hover){
@@ -210,4 +212,24 @@ h1{
 
 body{
   background-color: #f9f9f9;
+}
+
+#homelogo{
+  background-image:url("../img/homeicon.png");
+  width:100px;
+  height:50px;
+}
+
+#homelogo:hover{
+  background-image:url("../img/homeiconblue.png");
+  width:100px;
+  height:50px;
+}
+
+.navbar-brand{
+  padding:0 !important;
+}
+
+#footer2{
+  background-color: red;
 }

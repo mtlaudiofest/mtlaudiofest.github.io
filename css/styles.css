@@ -92,8 +92,6 @@ background-color: #f9f9f9;
 
 #events{
 padding-top: 50px;
-/*background-color: rgba(75,125,255,0.1);*/
-max-height: 1500px;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover{
 background-color: #F8F8F8;
